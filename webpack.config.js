@@ -27,7 +27,11 @@ module.exports = {
       },
       {
         test: /\.(js|jsx)$/,
-        use: ['babel-loader']
+        use: ['babel-loader'],
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       }
     ]
   },
