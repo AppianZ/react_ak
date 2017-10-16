@@ -7,7 +7,7 @@ import reset from './assets/sass/reset.scss';
 import { BrowserRouter as Router, HashRouter} from 'react-router-dom'
 import App from './components/App/index';
 
-// const root = document.getElementById('root');
+const root = document.getElementById('root');
 function formatName(user) {
   return user.firstName + ' ' + user.lastName;
 }
@@ -25,5 +25,5 @@ const element = (
 
 ReactDOM.render(
   element,
-  document.getElementById('root')
+  root
 );
