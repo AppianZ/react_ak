@@ -5,25 +5,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reset from './assets/sass/reset.scss';
 import { BrowserRouter as Router, HashRouter} from 'react-router-dom'
-import App from './components/App/index';
+import App from './components/App';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from './reducers';
 
-const root = document.getElementById('root');
-function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
-}
-
-const user = {
-  firstName: 'Harper',
-  lastName: 'Perez'
-};
+const store = createStore(reducer);
+console.log(store.getState());
 
 const element = (
-  <h1 className="hello">
-    Hello, {formatName(user)}!
-  </h1>
+  <Provider store={store}>
+    <App/>
+  </Provider>
 );
 
 ReactDOM.render(
   element,
-  root
+  document.getElementById('root')
 );
