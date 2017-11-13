@@ -1,14 +1,12 @@
 import React from 'react'
-import Footer from './../Footer'
-import AddTodo from '../../containers/AddTodo'
-import VisibleTodoList from '../../containers/VisibleTodoList'
+import { Route } from 'react-router-dom'
+import Home from './../Home';
+import About from  './../About'
 
 const App = () => (
-  <div id="test">
-    <p className="hello">123213312</p>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
+  <div id="App">
+    <Route exact path="/" component={Home}/>
+    <Route path="/about" component={About}/>
   </div>
 );
 

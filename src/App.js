@@ -4,7 +4,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reset from './assets/sass/reset.scss';
-import { BrowserRouter as Router, HashRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import App from './components/App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -15,7 +15,9 @@ console.log(store.getState());
 
 const element = (
   <Provider store={store}>
-    <App/>
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
   </Provider>
 );
 
