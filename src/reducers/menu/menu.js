@@ -6,6 +6,8 @@ const showMenu = (state = false, action) => {
     // 根据不用的type来修改state
     case menu_type.TOGGLE_MENU:
       return !state;
+    case menu_type.CLEAR_MENU:
+      return false;
     default:
       return state;
   }

@@ -7,18 +7,11 @@ import reset from './assets/sass/reset.scss';
 import { HashRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import createHistory from 'history/createHashHistory'
 import reducer from './reducers';
 import Body from './containers/body';
 
 const store = createStore(reducer);
 console.log(store.getState());
-
-const history = createHistory()
-history.listen((location, action) => {
-
-})
-
 
 const element = (
   <Provider store = {store}>

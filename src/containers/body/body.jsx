@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { clearMenu } from '../../actions/menu';
 import App from '../../components/App';
 
 const mapStateToProps = state => {
@@ -7,9 +8,17 @@ const mapStateToProps = state => {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    setShowMenuFalse: () => {
+      dispatch(clearMenu());
+    },
+  }
+}
+
 const Body = connect(
   mapStateToProps,
-  () => ({}),
+  mapDispatchToProps,
   undefined,
   { pure : false },
 )(App);
