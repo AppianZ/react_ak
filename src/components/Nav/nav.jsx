@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import { Link } from 'react-router-dom'
 
-class Home extends Component {
+class Nav extends Component {
   constructor(props) {
     super(props);
   }
@@ -12,7 +12,7 @@ class Home extends Component {
 
   generatePcSvg() {
     var $svg = '<svg width="100%" height="100%" class="menu-rainbow">';
-    var rainbowColors = ['red','orange','gold','green','cyan','blue','purple','pink','lily'];
+    var rainbowColors = ['red','orange','gold','green','cyan','blue','purple','pink','white'];
     var svgHeight = ($('.menu-links').height()) / rainbowColors.length;
     var svgHeight2 = ($('.menu-links').height()) / (rainbowColors.length + 2);
     rainbowColors.forEach((item,index) => {
@@ -68,4 +68,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Nav;

@@ -1,15 +1,16 @@
-import React, { Component }  from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Nav from './../Nav';
 
-class NavToggle extends Component {
-  constructor(props) {
-    super(props);
-  }
+const NavToggle = ({ onMenuClick }) => (
+  <div className="menu-box">
+    <div className="menu-toggle" onClick={onMenuClick}></div>
+    <Nav></Nav>
+  </div>
+)
 
-  render() {
-    return (
-      <div className="menu-toggle"></div>
-    );
-  }
+NavToggle.propTypes = {
+  onMenuClick: PropTypes.func,
 }
 
 export default NavToggle;
