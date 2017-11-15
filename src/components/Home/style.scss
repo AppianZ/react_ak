@@ -57,7 +57,13 @@ $rem: 75;
   }
   a {
     display: block;
-    font-weight: 300;
+  }
+  .menu-links-wrap {
+    position: relative;
+  }
+  .menu-links {
+    position: relative;
+    width: 100%;
   }
 }
 
@@ -74,60 +80,24 @@ $rem: 75;
       font-size: 18px;
       letter-spacing: 1px;
     }
-    a {
-    /*  padding: 0;
-      margin: 0 35%;
-      height: 28px;
-      line-height: 28px;
-      letter-spacing: 2px;
-      color: rgba(109, 109, 109, 0.8);
-      font-size: 14px;
-      cursor: pointer;
-      transform: translate3d(0, 0, 0);
-      transition: all .5s ease -.1s;
-      &:hover, &:active {
-        font-size: 15px;
-        color: rgba(102, 102, 102, 1);
-        transform: translate3d(0,0,0);
-      }*/
-    }
-    .menu-links-wrap {
-      position: relative;
-      height: 30%;
-    }
-    .menu-links {
-      padding-left: 7%;
-      position: relative;
-    }
-    .middle {
-      width: 100%;
-    }
-    .menu-rainbow {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      rect {
-        transition: all ease .05s;
-      }
-    }
     .menu-link {
-      font-size: 34px;
+      font-size: 24px;
       color: #333;
+      letter-spacing: 2px;
       font-weight: 700;
-      text-transform: uppercase;
       display: inline-block;
       position: relative;
       z-index: 5000;
-      padding: 24px 0;
+      padding: 12px 0;
       line-height: .7;
       transition: all .1s ease-in-out 0s;
+      cursor: pointer;
       -webkit-transition: all .1s ease-in-out 0s;
       -moz-transition: .1s all 0s ease-in-out;
       -o-transition: .1s all 0s ease-in-out;
-    }
-    .menu-link:hover {
-      color: #666;
+      &:hover {
+        color: #666;
+      }
     }
   }
 }
@@ -136,7 +106,7 @@ $rem: 75;
   #titleBox {
     width: 100%;
     h3 {
-      letter-spacing: 5px;
+      letter-spacing: 5r(5);
       @include f(18);
     }
     p {
@@ -144,12 +114,23 @@ $rem: 75;
       color: rgba(102, 102, 102, 0.9);
       @include f(14);
     }
-    a {
-      padding: r(2) 0;
-      margin: 0 35% r(5);
-      color: #555;
+    .menu-link {
       @include f(12);
-      cursor: pointer;
+      color: #333;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: inline-block;
+      position: relative;
+      z-index: 5000;
+      padding: r(15) 0;
+      line-height: .7;
+      transition: all .1s ease-in-out 0s;
+      -webkit-transition: all .1s ease-in-out 0s;
+      -moz-transition: .1s all 0s ease-in-out;
+      -o-transition: .1s all 0s ease-in-out;
+      &:hover {
+        color: #666;
+      }
     }
   }
 }

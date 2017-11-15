@@ -8,7 +8,6 @@ class Home extends Component {
 
   componentDidMount() {
     this.generateCanvas();
-    this.generateSvg();
   }
 
   generateCanvas() {
@@ -60,37 +59,6 @@ class Home extends Component {
     i()
   }
 
-  generateSvg() {
-    var $svg = '<svg width="100%" height="100%" class="menu-rainbow">';
-    var rainbowColors = ['red','orange','gold','green','cyan','blue','purple','pink','lily'];
-    console.log($('.menu-links').height());
-    var svgHeight = ($('.menu-links').height() - 20) / rainbowColors.length;
-    var svgHeight2 = ($('.menu-links').height() - 20) / (rainbowColors.length + 2);
-    rainbowColors.forEach((item,index) => {
-      $svg += `<rect class='ray ray${index}' height='${svgHeight}' 
-              width='6' x='0' y='${svgHeight * index}'
-              style='fill:${item}'></rect>`;
-    })
-    $svg += '</svg>';
-    $('#menu .menu-links').prepend($svg);
-
-    var rects = Array.from($(".ray"));
-    var $height = 0, $width = 0;
-
-    $('.menu-links').mousemove((t) => {
-      if (t.pageX < ($(".menu-links li:nth-child(5) a").offset().left + $(".menu-links li:nth-child(5) a").width())) {
-        $height = (t.pageY - $('.menu-links').offset().top) / $('.menu-links').outerHeight();
-        $width = (t.pageX - $('.menu-links').offset().left) / $('.menu-links').outerWidth();
-        console.log($height + ' ----- ' + $width);
-        rects.forEach((item,index) => {
-          $(`.ray${index}`).attr('width', 6 + 240 * $width * (1 - Math.abs($height - svgHeight * (index + .5) / $(".menu-rainbow").height())))
-            .attr('height', svgHeight2 * (.1 + Math.abs($height - svgHeight * (index +.5)/ $(".menu-rainbow").height())));
-
-        })
-      }
-    })
-  }
-
   render() {
     return (
       <div id="home">
@@ -98,12 +66,12 @@ class Home extends Component {
         <div id="titleBox">
           <h3>APPIAN·嘉宝</h3>
           <p>An interested in algorithm & stupid girl</p>
-          <div className="menu-links-wrap" id="menu">
-            <ul className="menu-links middle">
-              <li><a className="menu-link dJAX_internal" href="/work">Our Work</a></li>
-              <li><a className="menu-link dJAX_internal" >The Brief</a></li>
-              <li><a className="menu-link dJAX_internal">Our Team</a></li>
-              <li><a className="menu-link dJAX_internal">About</a></li>
+          <div className="menu-links-wrap">
+            <ul className="menu-links">
+              <li><Link className="menu-link" to="/articles">Articles</Link></li>
+              <li><Link className="menu-link" to="/plug-ins">Plug-ins</Link></li>
+              <li><a className="menu-link" href="https://github.com/AppianZ" target="_blank">GitHub</a></li>
+              <li><Link className="menu-link" to="/about">About</Link></li>
             </ul>
           </div>
         </div>

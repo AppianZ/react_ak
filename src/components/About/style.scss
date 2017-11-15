@@ -25,6 +25,9 @@ $rem: 75;
   background: url('./imgs/homepagebg.png') repeat;
   background-size: contain;
   background-position: top left;
+  &.on {
+    overflow: hidden;
+  }
   .pc-box {
     position: relative;
     height: 100%;

@@ -1,0 +1,92 @@
+$rem: 75;
+@function r($px) {
+  @return $px / $rem * 1 + rem;
+}
+
+@mixin f($font-size) {
+  font-size: $font-size + px;
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 2 + px;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3 + px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .menu-toggle {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    right: 28px;
+    top: 28px;
+    color: initial;
+    background: #333;
+    cursor: pointer;
+    z-index: 1000;
+    &:hover {
+      background: #222;
+      &:before, &:after {
+        width: 12px;
+        height: 1px;
+        left: 14px;
+        box-shadow: 0 19px #00c9bf,
+        0 10px #87c70f,
+        0 28px #ed1c0d,
+        0 13px #ed7300,
+        0 25px #3d8cde,
+        0 16px #ffa3b5,
+        0 22px #ffbf0f;
+      }
+    }
+    &:before, &:after {
+      display: inline-block;
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 2px;
+      left: 12px;
+      top: 0;
+      box-shadow: 0 12px #fff,
+      0 12px #fff,
+      0 19px #fff,
+      0 19px #fff,
+      0 19px #fff,
+      0 26px #fff,
+      0 26px #fff;
+      transition: all .13s ease-in-out 0s;
+    }
+  }
+  .on {
+    .menu-toggle {
+      &:hover {
+        &:before {
+          transform: rotate(-45deg) translate(-16px, -8px);
+        }
+        &:after {
+          transform: rotate(45deg) translate(11px, -3px);
+        }
+      }
+      &:before, &:after {
+        width: 20px;
+        box-shadow: 0 19px #fff,
+        0 19px #fff, 0 19px #fff,
+        0 19px #fff,0 19px #fff,
+        0 19px #fff, 0 19px #fff;
+      }
+      &:before {
+        transform: rotate(-45deg) translate(-15px, -7px);
+      }
+      &:after {
+        transform: rotate(45deg) translate(12px, -4px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+}
+
