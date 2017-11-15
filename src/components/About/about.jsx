@@ -2,7 +2,14 @@ import React from 'react'
 
 const About = () => (
   <div id="About">
-    this is about
+    <div className="pc-box">
+      <div className="pc-container">
+        <div className=""></div>
+      </div>
+      <div className="pc-apple"></div>
+      <div className="pc-moon"></div>
+      <div className="pc-start"></div>
+    </div>
   </div>
 );
 

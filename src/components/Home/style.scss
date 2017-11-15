@@ -15,10 +15,6 @@ $rem: 75;
   }
 }
 
-body, html {
-  height: 100%;
-}
-
 #home {
   position: relative;
   height: 100%;
@@ -79,7 +75,7 @@ body, html {
       letter-spacing: 1px;
     }
     a {
-      padding: 0;
+    /*  padding: 0;
       margin: 0 35%;
       height: 28px;
       line-height: 28px;
@@ -93,7 +89,45 @@ body, html {
         font-size: 15px;
         color: rgba(102, 102, 102, 1);
         transform: translate3d(0,0,0);
+      }*/
+    }
+    .menu-links-wrap {
+      position: relative;
+      height: 30%;
+    }
+    .menu-links {
+      padding-left: 7%;
+      position: relative;
+    }
+    .middle {
+      width: 100%;
+    }
+    .menu-rainbow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      rect {
+        transition: all ease .05s;
       }
+    }
+    .menu-link {
+      font-size: 34px;
+      color: #333;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: inline-block;
+      position: relative;
+      z-index: 5000;
+      padding: 24px 0;
+      line-height: .7;
+      transition: all .1s ease-in-out 0s;
+      -webkit-transition: all .1s ease-in-out 0s;
+      -moz-transition: .1s all 0s ease-in-out;
+      -o-transition: .1s all 0s ease-in-out;
+    }
+    .menu-link:hover {
+      color: #666;
     }
   }
 }

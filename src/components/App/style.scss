@@ -1,4 +1,8 @@
 //@import "./../../assets/sass/reset";
+body, html {
+  height: 100%;
+  width: 100%;
+}
 
 #root, #App {
   height: 100%;

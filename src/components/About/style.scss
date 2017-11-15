@@ -1,7 +1,71 @@
-//@import "./../../assets/sass/reset";
+$rem: 75;
+@function r($px) {
+  @return $px / $rem * 1 + rem;
+}
+
+@mixin f($font-size) {
+  font-size: $font-size + px;
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 2 + px;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3 + px;
+  }
+}
 
 #About {
+  position: relative;
   height: 100%;
   width: 100%;
+  padding: 0;
+  perspective: 1px;
+  overflow-x: hidden;
+  background: url('./imgs/homepagebg.png') repeat;
+  background-size: contain;
+  background-position: top left;
+  .pc-box {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+  .pc-container {
+    position: absolute;
+    left: 50%;
+    width: 750px;
+    height: 100%;
+    font-size: 20px;
+    line-height: 2;
+    color: #555;
+    transform: translate3d(-50%, 0, 0) scale(1);
+  }
+  .pc-apple, .pc-moon, .pc-start {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    transform: translate3d(0 , 0, -1px) scale(2.05);
+  }
+  .pc-apple {
+    top: 100px;
+    left: 100px;
+    background: red;
+  }
+  .pc-moon {
+    top: 300px;
+    right: 100px;
+    background: yellow;
+  }
+  .pc-start {
+    top: 900px;
+    left: 100px;
+    background: blue;
+  }
+}
+
+@media screen and (min-width: 750px) {
+}
+
+@media screen and (max-width: 750px) {
 }
 
