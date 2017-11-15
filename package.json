@@ -22,6 +22,7 @@
   "homepage": "https://github.com/AppianZ/react_ak#readme",
   "dependencies": {
     "babel-runtime": "^6.26.0",
+    "history": "^4.7.2",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

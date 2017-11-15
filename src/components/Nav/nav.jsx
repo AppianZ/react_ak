@@ -53,10 +53,10 @@ class Nav extends Component {
         <div className="nav-pc">
           <div className="menu-links-wrap" id="menu">
             <ul className="menu-links middle">
+              <li><Link className="menu-link" to="/">Home</Link></li>
               <li><a className="menu-link">Articles</a></li>
-              <li><a className="menu-link">Plug-ins</a></li>
               <li><a className="menu-link">GitHub</a></li>
-              <li><Link className="menu-link" to="/about">About</Link></li>
+              <li><a className="menu-link">About</a></li>
             </ul>
           </div>
           <div className="copyright">Knowledge is weightless, a treasure you can always carry easily.<br/>

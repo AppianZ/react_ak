@@ -1,9 +1,7 @@
 import { connect } from 'react-redux';
-import { toggleMenu } from '../../actions/menu';
 import App from '../../components/App';
 
 const mapStateToProps = state => {
-  console.log('state:' + state);
   return {
     status: state.showMenu,
   }
@@ -11,7 +9,9 @@ const mapStateToProps = state => {
 
 const Body = connect(
   mapStateToProps,
-  () => ({}), // 顶替mapDispatchToProps
+  () => ({}),
+  undefined,
+  { pure : false },
 )(App);
 
 export default Body;

@@ -69,7 +69,6 @@ class Home extends Component {
           <div className="menu-links-wrap">
             <ul className="menu-links">
               <li><Link className="menu-link" to="/articles">Articles</Link></li>
-              <li><Link className="menu-link" to="/plug-ins">Plug-ins</Link></li>
               <li><a className="menu-link" href="https://github.com/AppianZ" target="_blank">GitHub</a></li>
               <li><Link className="menu-link" to="/about">About</Link></li>
             </ul>
