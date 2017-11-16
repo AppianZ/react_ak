@@ -81,19 +81,7 @@ $rem: 75;
     display: none!important;
   }
   .mobile-box {
-    height: 100%;
-    width: 100%;
-  }
-  .mobile-container {
-    position: relative;
-    left: 50%;
-    width: r(700);
-    min-height: 100%;
-    font-size: r(20);
-    line-height: 2;
-    color: #555;
-    background: yellow;
-    transform: translate3d(-50%, 0, 0);
+
   }
 }
 
