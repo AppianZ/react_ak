@@ -77,11 +77,15 @@ $rem: 75;
 }
 
 @media screen and (max-width: 750px) {
+  #About {
+    background: red!important;
+  }
   .menu-box, .pc-icon, .pc-box {
     display: none!important;
   }
   .mobile-box {
 
   }
+
 }
 
