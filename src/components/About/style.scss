@@ -74,13 +74,16 @@ $rem: 75;
 }
 
 @media screen and (max-width: 750px) {
-  body, html, #root, #app {
-    height: auto!important;
-  }
   #About {
+    height: 100%;
+    width: 100%;
   }
   .menu-box, .pc-icon, .pc-box {
     display: none!important;
+  }
+  .mobile-box {
+    width: 100%;
+    height: 100%;
   }
 }
 
