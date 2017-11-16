@@ -20,7 +20,6 @@ $rem: 75;
   height: 100%;
   width: 100%;
   padding: 0;
-  overflow-x: hidden;
   background: url('https://ohovav7hg.qnssl.com/homepagebg.png') repeat;
   background-size: contain;
   background-position: top left;
@@ -29,6 +28,7 @@ $rem: 75;
 @media screen and (min-width: 750px) {
   #About {
     perspective: 1px;
+    overflow-x: hidden;
   }
   .about-box {
     position: relative;
@@ -79,9 +79,9 @@ $rem: 75;
   }
   .about-container {
     display: block;
-    padding: .3rem 1rem 1.5rem;
-    margin: r(50) r(65) r(80)!important;
-    background: yellow;
+    padding: .3rem 1rem 1.5rem 1rem ;
+    margin: r(50) r(60) r(80) r(60)!important;
+    background: rgba(255, 255, 255, .6);
   }
 }
 
