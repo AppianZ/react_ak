@@ -11,9 +11,9 @@ class Home extends Component {
   }
 
   generateCanvas() {
-    document.addEventListener('touchmove', function (e) {
+    /*document.addEventListener('touchmove', function (e) {
       e.preventDefault()
-    })
+    })*/
     var c = document.getElementsByTagName('canvas')[0],
       x = c.getContext('2d'),
       pr = window.devicePixelRatio || 1,
