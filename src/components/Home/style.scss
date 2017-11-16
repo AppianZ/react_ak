@@ -20,7 +20,6 @@ $rem: 75;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: rgba(255, 255, 255, .3);
   &:after {
     content: '';
     display: block;
@@ -68,6 +67,9 @@ $rem: 75;
 }
 
 @media screen and (min-width: 750px) {
+  #homepage {
+    background: rgba(255, 255, 255, .8);
+  }
   #titleBox {
     width: 430px;
     h3 {
@@ -103,6 +105,9 @@ $rem: 75;
 }
 
 @media screen and (max-width: 750px) {
+  #homepage {
+    background: rgba(255, 255, 255, .3);
+  }
   #titleBox {
     width: 100%;
     h3 {
