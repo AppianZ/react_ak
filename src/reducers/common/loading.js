@@ -5,8 +5,6 @@ const showLoading = (state = false, action) => {
   switch (action.type) {
     // 根据不用的type来修改state
     case common_type.TOGGLE_LOADING:
-      console.log('---toggle loading');
-      console.log(action);
       return action.value;
     default:
       return state;
