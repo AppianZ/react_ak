@@ -23,6 +23,14 @@ body, html {
 }
 
 @media screen and (max-width: 750px) {
+  body, html, #root, #App {
+    overflow-x: hidden;
+    overflow-y: auto;
+    div:nth-last-child {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
 }
 
 .color-icon {
