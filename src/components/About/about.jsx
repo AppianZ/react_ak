@@ -36,7 +36,7 @@ class About extends Component {
             this.state.nameArr.map((item, index) => this.generateSvg(item, index))
           }
         </div>
-        <div className="mobile-box markdown">
+        <div>
           jiemiedsasoidjasohdashda.sdkl是倒萨大撒迪欧是降低活动啊收到jiemiedsasoidjasohdashda.sdkl是倒萨大撒迪欧是降低活动啊收到jiemiedsasoidjasohdashda.sdkl是倒萨大撒迪欧是降低活动啊收到jiemiedsasoidjasohdashda.sdkl是倒萨大撒迪欧是降低活动啊收到jiemiedsasoidjasohdashda.sdkl是倒萨大撒迪欧是降低活动啊收到jiemiedsasoidjasohdashda.sdkl是倒萨大撒迪欧是降低活动啊收到jiemiedsasoidjasohdashda.sdkl是倒萨大撒迪欧是降低活动啊收到jiemiedsasoidjasohdashda.sdkl是倒萨大撒迪欧是降低活动啊收到jiemiedsasoidjasohdashda.sdkl是倒萨大撒迪欧是降低活动啊收到
         </div>
       </div>
