@@ -23,13 +23,13 @@ if(nodeEnv === 'production') {
         reduce_vars: true,
       }
     }))
-  plugins.push(new CompressionPlugin({
+  /*plugins.push(new CompressionPlugin({
     asset: '[path].gz[query]',
     algorithm: 'gzip',
     test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
     threshold: 10240,
     minRatio: 0.8
-  }));
+  }));*/
 }
 
 module.exports = {
