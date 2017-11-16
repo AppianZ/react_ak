@@ -74,7 +74,8 @@ $rem: 75;
 }
 
 @media screen and (max-width: 750px) {
-  #root, #app {
+  body, html, #root, #app {
+    height: auto!important;
   }
   #About {
   }
