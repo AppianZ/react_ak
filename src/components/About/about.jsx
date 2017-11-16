@@ -36,7 +36,7 @@ class About extends Component {
             this.state.nameArr.map((item, index) => this.generateSvg(item, index))
           }
         </div>
-        <div className="markdown mobile-box"
+        <div className="mobile-box markdown"
              dangerouslySetInnerHTML={{__html:article.toString()}}>
         </div>
       </div>
