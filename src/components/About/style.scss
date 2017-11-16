@@ -75,10 +75,11 @@ $rem: 75;
 
   }
   .menu-box, .pc-icon {
-    display: none;
+    display: none!important;
   }
   .about-box {
-    background: rgba(255, 255, 255, .6);
+    padding: r(30) r(25) r(50)!important;
+    background: yellow;
   }
 }
 
