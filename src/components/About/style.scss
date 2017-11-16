@@ -78,8 +78,10 @@ $rem: 75;
     display: none!important;
   }
   .about-container {
-    margin: r(30) r(25) r(50)!important;
-    background: rgba(255,255,255,.6);
+    display: block;
+    padding: .3rem 1rem 1.5rem;
+    margin: r(50) r(65) r(80)!important;
+    background: yellow;
   }
 }
 
