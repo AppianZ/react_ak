@@ -7,6 +7,18 @@ var webpack = require('webpack');
 
 console.log(nodeEnv + '  _____env_____ ' + (nodeEnv === 'production')) ;
 
+var plugins = [
+  new webpack.HotModuleReplacementPlugin()
+];
+
+if(nodeEnv === 'production') {
+  plugins.push(new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false
+    }
+  }))
+}
+
 module.exports = {
   entry: './src/App.js',
   output: {
@@ -41,9 +53,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
+  plugins,
   devtool: nodeEnv === 'production' ? 'source-map' : 'inline-source-map',
   devServer: {
     contentBase: './',
