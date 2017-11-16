@@ -20,7 +20,6 @@ $rem: 75;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: rgba(255, 255, 255, .8);
   &:after {
     content: '';
     display: block;
@@ -43,8 +42,8 @@ $rem: 75;
 #titleBox {
   position: absolute;
   top: 45%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  right: 0;
+  transform: translate3d(0, -50%, 0);
   text-align: center;
   h3 {
     color: #333;
