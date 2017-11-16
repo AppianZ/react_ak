@@ -21,7 +21,7 @@ class App extends React.Component {
       toggleLoading(true);
       setTimeout(() => {
         toggleLoading(false);
-      }, 850);
+      }, 1250);
     })
   }
 
