@@ -4,19 +4,32 @@
 var path = require('path');
 var nodeEnv = process.env.NODE_ENV;
 var webpack = require('webpack');
+var CompressionPlugin = require('compression-webpack-plugin');
 
 console.log(nodeEnv + '  _____env_____ ' + (nodeEnv === 'production')) ;
 
 var plugins = [
-  new webpack.HotModuleReplacementPlugin()
+  new webpack.HotModuleReplacementPlugin(),
 ];
 
 if(nodeEnv === 'production') {
   plugins.push(new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false
-    }
-  }))
+      beautify: false,
+      comments: false,
+      compress: {
+        warnings: false,
+        drop_console: true,
+        collapse_vars: true,
+        reduce_vars: true,
+      }
+    }))
+  plugins.push(new CompressionPlugin({
+    asset: '[path].gz[query]',
+    algorithm: 'gzip',
+    test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
+    threshold: 10240,
+    minRatio: 0.8
+  }));
 }
 
 module.exports = {
@@ -51,7 +64,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
   plugins,
   devtool: nodeEnv === 'production' ? 'source-map' : 'inline-source-map',
