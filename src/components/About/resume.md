@@ -73,19 +73,6 @@
    
 <br/>
 
-## 技术文章
-
-- [Vue动态组件之表单的CURD](http://www.jianshu.com/p/73dba151eb29)
-- [从零开始学Vue](https://segmentfault.com/a/1190000005041030)
-- [纪念即将逝去的Vue过滤器(翻译文章并补充)](https://segmentfault.com/a/1190000005027001) 
-- [组件改变生活_揭开Vue组件的神秘面纱](https://segmentfault.com/a/1190000005045219)
-- [『为移动端而生』的自定义多级联动选择器](https://gold.xitu.io/post/583faa050ce46300576216df)
-- [如何造一个移动端的联动选择器 - 系列](https://gold.xitu.io/post/583fb0312f301e005cf44aeb)
-- [一段人人都应该知道的从Vue到React的过渡史](https://gold.xitu.io/post/585b1f4b8d6d810065d02ac2)
-- [为什么我们选择Vue，而不选React（译）](https://gold.xitu.io/post/58606e361b69e6005622fc05)
-
-<br/>
-
 ## 技能关键字
 
 - 熟练使用html5、css3、sass，有丰富的移动端开发经验，能准确还原设计稿

@@ -28,8 +28,8 @@ class About extends Component {
       <div id="About">
         <Menu></Menu>
         <Loading></Loading>
-        <div className="pc-box">
-          <div className="pc-container markdown"
+        <div className="about-box">
+          <div className="about-container markdown"
                dangerouslySetInnerHTML={{__html:article.toString()}}>
           </div>
           {
