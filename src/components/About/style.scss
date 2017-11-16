@@ -30,12 +30,15 @@ $rem: 75;
     perspective: 1px;
     overflow-x: hidden;
   }
-  .about-box {
+  .mobile-box {
+    display: none!important;
+  }
+  .pc-box{
     position: relative;
     height: 100%;
     transform-style: preserve-3d;
   }
-  .about-container {
+  .pc-container {
     position: absolute;
     left: 50%;
     width: 750px;
@@ -74,14 +77,8 @@ $rem: 75;
   #About {
 
   }
-  .menu-box, .pc-icon {
+  .menu-box, .pc-icon, .pc-box {
     display: none!important;
-  }
-  .about-container {
-    display: block;
-    padding: .3rem 1rem 1.5rem 1rem ;
-    margin: 0 r(60)!important;
-    background: rgba(255, 255, 255, .6);
   }
 }
 
