@@ -1,9 +1,11 @@
 import React from 'react'
 import Menu from './../../containers/menu';
+import Loading from './../../components/Loading';
 
 const About = () => (
   <div id="About">
     <Menu></Menu>
+    <Loading></Loading>
     <div className="pc-box">
       <div className="pc-container">
         这是一篇文章

@@ -1,0 +1,57 @@
+$rem: 75;
+@function r($px) {
+  @return $px / $rem * 1 + rem;
+}
+
+@mixin f($font-size) {
+  font-size: $font-size + px;
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 2 + px;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3 + px;
+  }
+}
+
+.loaded .loading-box {
+  display: none!important;
+}
+
+@media screen and (min-width: 750px) {
+  .loading-box {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+    overflow: hidden;
+    .loading {
+      position: relative;
+      display: inline-block;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0) scale(.8);
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .loading-box {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+    overflow: hidden;
+    .loading {
+      position: relative;
+      display: inline-block;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0) scale(.8);
+    }
+  }
+}
+

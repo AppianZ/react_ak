@@ -7,8 +7,12 @@ body, html {
 #root, #App {
   height: 100%;
   width: 100%;
-  &.on {
-    overflow: hidden;
-  }
 }
 
+#App.on, #App.load {
+  overflow: hidden;
+}
+
+#App.on > div, #App.load > div {
+  overflow: hidden;
+}
