@@ -44,7 +44,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
-  devtool: 'inline-source-map',
+  devtool: nodeEnv === 'production' ? 'source-map' : 'inline-source-map',
   devServer: {
     contentBase: './',
     port: 3200,
