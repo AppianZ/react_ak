@@ -34,32 +34,34 @@ $rem: 75;
     position: absolute;
     left: 50%;
     width: 750px;
-    height: 100%;
+    min-height: 100%;
     font-size: 20px;
     line-height: 2;
     color: #555;
+    background: rgba(255,255,255,.5);
     transform: translate3d(-50%, 0, 0) scale(1);
   }
-  .pc-apple, .pc-moon, .pc-start {
+  .pc-icon {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     transform: translate3d(0 , 0, -1px) scale(2.05);
+    .color-icon {
+      width: 4em;
+      height: 4em;
+    }
   }
-  .pc-apple {
-    top: 100px;
-    left: 100px;
-    background: red;
+  @for $i from 0 through 8 {
+    .pc-icon-#{$i} {
+      top: (random() * .6 + .2) * 1800px;
+      left: -(random() * .6) * 750px;
+    }
   }
-  .pc-moon {
-    top: 300px;
-    right: 100px;
-    background: yellow;
-  }
-  .pc-start {
-    top: 900px;
-    left: 100px;
-    background: blue;
+  @for $i from 9 through 17 {
+    .pc-icon-#{$i} {
+      top: (random() * .6 + .2) * 1800px;
+      right: -(random() * .6) * 750px;
+    }
   }
 }
 
