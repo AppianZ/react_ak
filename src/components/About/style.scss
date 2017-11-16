@@ -16,6 +16,9 @@ $rem: 75;
 }
 
 #About {
+  position: relative;
+  height: 100%;
+  width: 100%;
   padding: 0;
   background: url('https://ohovav7hg.qnssl.com/homepagebg.png') repeat;
   background-size: contain;
@@ -24,13 +27,13 @@ $rem: 75;
 }
 
 @media screen and (min-width: 750px) {
+  body, html {
+    overflow: hidden;
+  }
   #About {
-    position: relative;
-    height: 100%;
-    width: 100%;
     perspective: 1px;
   }
-  .mobile-box {
+  .mobile-box, .mobile-container{
     display: none!important;
   }
   .pc-box{
@@ -74,16 +77,23 @@ $rem: 75;
 }
 
 @media screen and (max-width: 750px) {
-  #About {
-    height: 100%;
-    width: 100%;
-  }
   .menu-box, .pc-icon, .pc-box {
     display: none!important;
   }
   .mobile-box {
-    width: 100%;
     height: 100%;
+    width: 100%;
+  }
+  .mobile-container {
+    position: relative;
+    left: 50%;
+    width: r(700);
+    min-height: 100%;
+    font-size: r(20);
+    line-height: 2;
+    color: #555;
+    background: yellow;
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
