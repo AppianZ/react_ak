@@ -1,4 +1,3 @@
-//@import "./../../assets/sass/reset";
 body, html {
   height: 100%;
   width: 100%;
@@ -51,11 +50,9 @@ body, html {
   ::-webkit-scrollbar:horizontal{
     height: 8px;
   }
-
   ::-webkit-scrollbar-button{
     height: 0;
   }
-
   ::-webkit-scrollbar-track {
     border-radius: 4px;
   }
@@ -121,7 +118,6 @@ body, html {
     zoom: 25%;
   }
 
-
   p img{
     margin: 0 auto;
   }
@@ -145,10 +141,6 @@ body, html {
     margin: 0 0 0.6em 0;
   }
 
-  /* text indent for chinese starts*/
-  /*h2, h3, h4, h5, h6, .p_part p, .todo_item, p{
-      text-indent: 0px;
-  }*/
   table, pre, svg, .codehilitetable{
     margin-left: 0px;
     margin-right: 0px;
@@ -164,13 +156,9 @@ body, html {
     border-left: none;
   }
 
-  /* text indent for chinese ends*/
-
-
   blockquote .p_part p, li .p_part p{
     text-indent: 0 !important;
   }
-
 
   hr{
     margin: 38px 0;
@@ -182,7 +170,6 @@ body, html {
     font-size:1px;
     overflow: hidden;
   }
-
 
   h1{
     color: #10a3ee;
@@ -235,7 +222,6 @@ body, html {
     overflow: visible;
   }
 
-
   blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -245,7 +231,6 @@ body, html {
     color: #888888;
     min-height:20px;
   }
-
 
   blockquote p {
     margin: 0.8em 0;
@@ -267,8 +252,6 @@ body, html {
     color: #ccc;
   }
 
-
-
   table {
     background-color: transparent;
     border-collapse: collapse;
@@ -279,7 +262,6 @@ body, html {
     margin-bottom: 20px;
   }
 
-
   th, td {
     border-left: 1px solid #d9d9d9;
     padding: 8px;
@@ -288,9 +270,6 @@ body, html {
     vertical-align: top;
     border-top: 1px solid #d9d9d9;
   }
-
-
-
 
   code{
     background: #f5f5f5;
@@ -341,7 +320,6 @@ body, html {
     line-height: 1.8em;
   }
 
-
   a{
     color: #4083c4;
     text-decoration: none;
@@ -358,18 +336,10 @@ body, html {
     font-weight: bold;
   }
 
-
-  /* for markdown */
-
   .linenos pre{
     background: transparent;
     border: none;
   }
-  /*
-  .linenos{
-      padding: 0 0 0 10px;
-  }
-  */
 
   .toc{
     background: #fdfdfd;
@@ -391,8 +361,6 @@ body, html {
     color: #3c3c3c;
   }
 
-
-
   .todo_item{
     list-style: none;
     margin-left: -1.5em
@@ -408,7 +376,6 @@ body, html {
   .todo_undone_item{
     color: #c85a57;
   }
-
 
   ul li.todo_item{
     list-style-type: none;
@@ -430,20 +397,15 @@ body, html {
     display:none
   }
 
-
-  /*pygments*/
-
   .codehilite{
     background: transparent !important;
   }
 
   table.codehilitetable{ border:none; }
 
-
   .codehilitetable td{ border: none; padding: 0;}
 
   .flow-graphic{text-align: center}
-
 
   table, tr, td, th, tbody, thead, tfoot, .md_echarts, blockquote .md_line{
     page-break-inside: avoid !important;
@@ -452,7 +414,6 @@ body, html {
   .footnotes .md_line{
     display: inline !important;
   }
-
 
   .img_rt_90{
     transform:rotate(90deg);
@@ -482,8 +443,6 @@ body, html {
   .md_has_block_below_img{
     margin-bottom: -0.6em !important;
   }
-
-
 
   span.md_line{margin-bottom:0.5em; display:block; line-height:1.8186625}
   .md_line br{ display: none;}
