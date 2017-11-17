@@ -17,7 +17,6 @@ $rem: 75;
 
 #About {
   position: relative;
-  height: 100%;
   width: 100%;
   padding: 0;
   background: url('https://ohovav7hg.qnssl.com/homepagebg.png') repeat;
@@ -31,6 +30,7 @@ $rem: 75;
     overflow: hidden;
   }
   #About {
+    height: 100%;
     perspective: 1px;
   }
   .mobile-box, .mobile-container{
@@ -77,9 +77,6 @@ $rem: 75;
 }
 
 @media screen and (max-width: 750px) {
-  #root, #app, #about {
-    height: auto!important;
-  }
   .menu-box, .pc-icon, .pc-box {
     display: none!important;
   }

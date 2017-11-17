@@ -5,13 +5,13 @@ body, html {
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: none;
 }
-
 #root, #App {
-  height: 100%;
   width: 100%;
 }
-
 @media screen and (min-width: 750px) {
+  #root, #App {
+    height: 100%;
+  }
   #App.on, #App.load {
     overflow: hidden;
   }
