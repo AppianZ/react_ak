@@ -1,0 +1,268 @@
+$rem: 75;
+@function r($px) {
+  @return $px / $rem * 1 + rem;
+}
+
+@mixin f($font-size) {
+  font-size: $font-size + px;
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 2 + px;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3 + px;
+  }
+}
+
+#articles {
+  width: 100%;
+  padding: 0;
+  background: url('https://ohovav7hg.qnssl.com/homepagebg.png') repeat;
+  background-size: contain;
+  background-position: top left;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 751px) {
+  #articles {
+    min-width: 1000px;
+    .mobile-articles {
+      display: none!important;
+    }
+    .articles-header {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      height: 300px;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(232, 232, 232, 0.7));
+      z-index: 10;
+      &:before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: 50%;
+        bottom: 6px;
+        transform: translate3d(-50%, 99%, 0);
+        border-width: 25px;
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+        z-index: 20;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 150px;
+        height: 10px;
+        left: -150px;
+        bottom: -5px;
+        box-shadow: 150px 0 #00c9bf,
+        300px 0 #87c70f,
+        450px 0 #ed1c0d,
+        600px 0 #ed7300,
+        750px 0 #3d8cde,
+        900px 0 #ffa3b5,
+        1050px 0 #ffbf0f,
+        1200px 0 #00c9bf,
+        1350px 0 #87c70f,
+        1500px 0 #ed1c0d,
+        1650px 0 #ed7300,
+        1800px 0 #3d8cde,
+        1950px 0 #ffa3b5,
+        2100px 0 #ffbf0f,
+        2250px 0 #00c9bf,
+        2400px 0 #87c70f;
+      }
+      & > div {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate3d(-50%, -50%, 0);
+        h5 {
+          margin: 0 0 10px;
+          font-weight: 500;
+          color: #1a1a1a;
+          letter-spacing: 2px;
+          font-size: 34px;
+        }
+        p {
+          font-weight: 400;
+          line-height: 1.5;
+          color: #666;
+          font-size: 14px;
+        }
+      }
+    }
+    .pc-articles{
+      width: 100%;
+      .title-box {
+        width: 100%;
+        div {
+          position: relative;
+          display: inline-block;
+          height: 240px;
+          width: 50%;
+          box-sizing: border-box;
+          text-align: center;
+        }
+      }
+      .title-box-odd div {
+        float: left;
+      }
+      .title-box-even div{
+        float: right;
+      }
+      .article-title {
+        background: rgba(255, 255, 255, .5);
+        transition: background .5s ease;
+        &:hover {
+          background: rgba(110, 110, 110, .2);
+        }
+        span {
+          position: absolute;
+          display: block;
+          width: 85%;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          a {
+            display: block;
+            margin: 0 0 15px 0;
+            color: #333;
+            font-size: 24px;
+            font-weight: 500;
+            cursor: pointer;
+            &:hover {
+              color: #000;
+            }
+          }
+          p {
+            line-height: 1.5;
+            font-size: 14px;
+            font-weight: 400;
+            color: #777;
+            cursor: none;
+            &:hover {
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #articles {
+    min-width: r(300);
+    .pc-articles {
+      display: none!important;
+    }
+    .articles-header {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      height: r(400);
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(232, 232, 232, 0.7));
+      z-index: 10;
+      &:before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: 50%;
+        bottom: r(6);
+        transform: translate3d(-50%, 99%, 0);
+        border-width: r(25);
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+        z-index: 20;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: r(100);
+        height: r(10);
+        left: r(-100);
+        bottom: r(-5);
+        box-shadow: r(100) 0 #00c9bf,
+        r(200) 0 #87c70f,
+        r(300) 0 #ed1c0d,
+        r(400) 0 #ed7300,
+        r(500) 0 #3d8cde,
+        r(600) 0 #ffa3b5,
+        r(700) 0 #ffbf0f,
+        r(800) 0 #00c9bf,
+        r(900) 0 #87c70f;
+      }
+      & > div {
+        position: relative;
+        top: 60%;
+        left: 50%;
+        text-align: center;
+        transform: translate3d(-50%, -50%, 0);
+        h5 {
+          margin: 0 0 r(10);
+          font-weight: 500;
+          color: #1a1a1a;
+          letter-spacing: r(2);
+          @include f(26);
+        }
+        p {
+          font-weight: 400;
+          line-height: 1.5;
+          color: #666;
+          @include f(14);
+        }
+      }
+    }
+    .mobile-articles{
+      width: 100%;
+      padding: 0 0 r(50) 0;
+      .title-box {
+        width: 100%;
+        height: r(360);
+        margin: 0 0 r(5);
+        text-align: center;
+      }
+      .article-title {
+        width: 100%;
+        height: r(360);
+        background: rgba(255, 255, 255, .65);
+        transition: background .5s ease;
+        &:active {
+          background: rgba(255, 255, 255, .9);
+        }
+        a {
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+          padding: r(65) 0 r(15) 0;
+          color: #111;
+          @include f(18);
+          font-weight: 500;
+          cursor: pointer;
+          &:hover {
+            color: #000;
+          }
+        }
+        p {
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+          line-height: 1.4;
+          @include f(12);
+          font-weight: 400;
+          color: #444;
+          cursor: none;
+          &:hover {
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+}
+

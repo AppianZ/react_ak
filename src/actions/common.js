@@ -12,3 +12,8 @@ export const toggleLoading = (bool) => ({
   type: common_type.TOGGLE_LOADING,
   value: bool
 });
+
+export const toggleMarkdown = (bool) => ({
+  type: common_type.TOGGLE_MARKDOWN,
+  value: bool
+});

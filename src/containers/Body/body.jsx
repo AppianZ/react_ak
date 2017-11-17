@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
-import { clearMenu, toggleLoading } from '../../actions/common';
+import { clearMenu, toggleLoading, toggleMarkdown } from '../../actions/common';
 import App from '../../components/App';
 
 const mapStateToProps = state => {
   return {
     status: state.showMenu,
     loading: state.showLoading,
+    isMd: state.isMarkdown,
   }
 }
 
@@ -16,6 +17,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     toggleLoading: (bool) => {
       dispatch(toggleLoading(bool));
+    },
+    toggleMarkdown: (bool) => {
+      dispatch(toggleMarkdown(bool));
     },
   }
 }

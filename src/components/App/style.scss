@@ -9,8 +9,15 @@ body, html {
   width: 100%;
 }
 @media screen and (min-width: 751px) {
+  body, html {
+    overflow-x: hidden;
+    .over-md {
+      overflow: hidden;
+    }
+  }
   #root, #App {
     height: 100%;
+    overflow-x: hidden;
   }
   #App.on, #App.load {
     overflow: hidden;

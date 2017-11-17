@@ -14,6 +14,16 @@ class About extends Component {
     };
   }
 
+  componentDidMount() {
+    $('body').addClass('over-md');
+    $('html').addClass('over-md');
+  }
+
+  componentWillUnmount() {
+    $('body').removeClass('over-md');
+    $('html').removeClass('over-md');
+  }
+
   generateSvg(name, index) {
     return (
       <div className={'pc-icon pc-icon-' + index } key={index}>
@@ -27,7 +37,7 @@ class About extends Component {
   render() {
     return (
       <div id="About">
-        <Menu></Menu>
+        <Menu url={'2'}></Menu>
         <Head url={'2'}></Head>
         <Loading></Loading>
         <div className="pc-box">
