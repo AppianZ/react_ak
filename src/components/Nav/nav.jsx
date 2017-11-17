@@ -55,7 +55,7 @@ class Nav extends Component {
             <ul className="menu-links middle">
               <li><Link className="menu-link" to="/">Home</Link></li>
               <li><a className="menu-link">Articles</a></li>
-              <li><a className="menu-link">GitHub</a></li>
+              <li><a className="menu-link" href="https://github.com/AppianZ" target="_blank">GitHub</a></li>
               <li><a className="menu-link">About</a></li>
             </ul>
           </div>

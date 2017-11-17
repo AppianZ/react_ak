@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import Menu from './../../containers/menu';
+import Menu from './../../containers/Menu';
 import Loading from './../../components/Loading';
+import Head from './../../containers/Head';
 import article from './resume.md';
 
 class About extends Component {
@@ -27,6 +28,7 @@ class About extends Component {
     return (
       <div id="About">
         <Menu></Menu>
+        <Head></Head>
         <Loading></Loading>
         <div className="pc-box">
           <div className="pc-container markdown"

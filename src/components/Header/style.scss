@@ -1,0 +1,190 @@
+$rem: 75;
+@function r($px) {
+  @return $px / $rem * 1 + rem;
+}
+
+@mixin f($font-size) {
+  font-size: $font-size + px;
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 2 + px;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3 + px;
+  }
+}
+
+@media screen and (min-width: 751px) {
+  #headerBox {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #headerBox {
+    width: 100%;
+    height: 100%;
+    #header {
+      position: fixed;
+      width: 100%;
+      height: r(110);
+      background: #fff;
+      border-bottom: 1px solid #ccc;
+      z-index: 999;
+      transition: background .5s ease 0s;
+      #headerLogo {
+        display: inline-block;
+        margin: 0 0 0 r(20);
+        height: r(110);
+        line-height: r(110);
+        @include f(16);
+        color: #E64F5C;
+        font-weight: 400;
+        &:before {
+          display: inline-block;
+          content: '';
+          width: r(75);
+          height: r(110);
+          margin: 0 r(10) 0 0;
+          background: url('https://ohovav7hg.qnssl.com/caticon.ico') no-repeat;
+          background-position: center;
+          background-size: contain;
+          vertical-align: top;
+        }
+      }
+      #headerLineWrap {
+        display: inline-block;
+        float: right;
+        padding: r(38) r(30) r(35);
+        > div {
+          position: relative;
+          display: inline-block;
+          height: r(35);
+          width: r(50);
+          line-height: 0;
+          vertical-align: top;
+          span {
+            position: absolute;
+            display: inline-block;
+            vertical-align: top;
+            height: r(4);
+            width: 100%;
+            background: #4D4D4D;
+            border-radius: (10);
+            &:nth-child(1) {
+              width: 100%;
+              top: 0;
+              left: 0;
+              transform: translate3d(0, -50%, 0) rotateZ(0deg);
+              opacity: 1;
+              transition: transform .5s ease;
+            }
+            &:nth-child(2) {
+              width: 100%;
+              top: 50%;
+              left: 0;
+              transform: translate3d(0, -50%, 0) rotateZ(0deg);
+              opacity: 1;
+              transition: opacity .5s ease;
+            }
+            &:nth-child(3) {
+              width: 100%;
+              top: 100%;
+              left: 0;
+              transform: translate3d(0, -50%, 0) rotateZ(0deg);
+              opacity: 1;
+              transition: transform .5s ease;
+            }
+          }
+        }
+      }
+    }
+    #popList {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0);
+      z-index: -1;
+      transition: z-index 0s ease .7s, background .5s ease;
+      > ul {
+        position: absolute;
+        padding: r(140) 0 0;
+        width: 100%;
+        background: #111;
+        z-index: 950;
+        transform: translate3d(0, -100%, 0);
+        transition: transform .5s ease;
+        &:after {
+          content: '';
+          position: relative;
+          display: inline-block;
+          width: r(101);
+          height: r(10);
+          left: r(-120);
+          bottom: r(-7);
+          box-shadow: r(100) 0 #00c9bf,
+          r(200) 0 #87c70f,
+          r(300) 0 #ed1c0d,
+          r(400) 0 #ed7300,
+          r(500) 0 #3d8cde,
+          r(600) 0 #ffa3b5,
+          r(700) 0 #ffbf0f,
+          r(800) 0 #fff;
+        }
+        li {
+          display: block;
+          height: r(100);
+          line-height: r(100);
+          color: #fff;
+          a {
+            display: block;
+            text-indent: r(60);
+            font-weight: 500;
+            @include f(14);
+            color: #666;
+          }
+          &:active, &:hover, &.on {
+            a {
+              color: #efefef;
+            }
+          }
+        }
+      }
+    }
+  }
+  .on {
+    #headerBox {
+      #header {
+        background: #111;
+        border-bottom: 1px solid #2c2c2c;
+      }
+      #popList {
+        background: rgba(0, 0, 0, .8);
+        z-index: 900;
+        transition: z-index 0s ease, background .5s ease;
+        > ul {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      #headerLineWrap > div {
+        span {
+          &:nth-child(1) {
+            top: 50%!important;
+            transform: translate3d(0, -50%, 0) rotateZ(-45deg)!important;
+          }
+          &:nth-child(2) {
+            opacity: 0!important;
+          }
+          &:nth-child(3) {
+            top: 50%!important;
+            transform: translate3d(0, -50%, 0) rotateZ(45deg)!important;
+          }
+        }
+      }
+    }
+  }
+}
+

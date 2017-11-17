@@ -8,7 +8,7 @@ import { HashRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './reducers';
-import Body from './containers/body';
+import Body from './containers/Body';
 
 const store = createStore(reducer);
 console.log(store.getState());
