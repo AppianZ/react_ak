@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 
 class Header extends Component {
-  static propTypes = {
-    onMenuBtnClick: PropTypes.func,
+  constructor(props) {
+    super(props)
   }
 
-  componentDidMount() {
+  static propTypes = {
+    onMenuBtnClick: PropTypes.func,
   }
 
   render() {
@@ -21,10 +22,10 @@ class Header extends Component {
         </div>
         <div id="popList" onClick={onMenuBtnClick}>
           <ul>
-            <li className="on"><Link to="/">Home</Link></li>
-            <li><Link to="/">Articles</Link></li>
+            <li className={this.props.url === '0' ? 'on' : ''}><Link to="/">Home</Link></li>
+            <li className={this.props.url === '1' ? 'on' : ''}><Link to="/">Articles</Link></li>
             <li><a href="https://github.com/AppianZ" target="_blank">GitHub</a></li>
-            <li><a>About</a></li>
+            <li className={this.props.url === '2' ? 'on' : ''}><a>About</a></li>
           </ul>
         </div>
       </div>

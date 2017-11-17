@@ -28,7 +28,7 @@ class About extends Component {
     return (
       <div id="About">
         <Menu></Menu>
-        <Head></Head>
+        <Head url={'2'}></Head>
         <Loading></Loading>
         <div className="pc-box">
           <div className="pc-container markdown"
