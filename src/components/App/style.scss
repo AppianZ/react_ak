@@ -11,7 +11,7 @@ body, html {
 @media screen and (min-width: 751px) {
   body, html {
     overflow-x: hidden;
-    overflow-y-scrolling: touch;
+    overflow-y: auto;
     .over-md {
       overflow: hidden;
     }
