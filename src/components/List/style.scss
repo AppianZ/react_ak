@@ -230,10 +230,10 @@ $rem: 75;
       .article-title {
         width: 100%;
         height: r(360);
-        background: rgba(255, 255, 255, .65);
+        background: rgba(255, 255, 255, .6);
         transition: background .5s ease;
         &:active {
-          background: rgba(255, 255, 255, .9);
+          background: rgba(255, 255, 255, .76);
         }
         a {
           display: block;
