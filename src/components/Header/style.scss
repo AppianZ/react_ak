@@ -143,7 +143,8 @@ $rem: 75;
             display: block;
             text-indent: r(60);
             font-weight: 500;
-            @include f(14);
+            @include f(16);
+            letter-spacing: r(1);
             color: #666;
           }
           &:active, &:hover, &.on {
