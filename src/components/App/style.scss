@@ -11,7 +11,6 @@ body, html {
 @media screen and (min-width: 751px) {
   body, html {
     overflow-x: hidden;
-    overflow-y-scrolling: touch;
     .over-md {
       overflow: hidden;
     }
@@ -32,10 +31,10 @@ body, html {
 @media screen and (max-width: 750px) {
   body, html, #root, #App {
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y-scrolling: touch;
     div:nth-last-child {
       overflow-x: hidden;
-      overflow-y: auto;
+      overflow-y-scrolling: touch;
     }
   }
 }
