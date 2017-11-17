@@ -64,14 +64,14 @@ $rem: 75;
   }
   @for $i from 0 through 8 {
     .pc-icon-#{$i} {
-      top: (random() * .6 + .2) * 1800px;
-      left: -(random() * .6) * 750px;
+      top: (random() * 3600) + 100px;
+      left: -(random() * .6) * 750px - 200px;
     }
   }
   @for $i from 9 through 17 {
     .pc-icon-#{$i} {
-      top: (random() * .6 + .2) * 1800px;
-      right: -(random() * .6) * 750px;
+      top: (random()  * 3600) + 100px;
+      right: -(random() * .6) * 750px - 200px;
     }
   }
 }

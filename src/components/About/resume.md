@@ -10,7 +10,7 @@
  - 第二专业 / 集美大学金融学
  - 工作年限: 2年
  - 技术社区: [Github](https://github.com/AppianZ)、[掘金](https://gold.xitu.io/user/57c664355bbb5000635314b6)、[SegmentFault](https://segmentfault.com/u/appian)
- - 技术博客: [http://appianz.github.io/](http://appianz.github.io/)
+ - 技术博客: [http://appian.me.meckodo.com/](http://appian.me.meckodo.com/)
  - 期望职位: 前端开发工程师
  - 期望地点: 深圳 > 厦门 > 杭州 
  
@@ -90,9 +90,14 @@
 ## 个人评价
 
 喜欢利用业余时间关注前端动向，利用碎片化时间充实自己；
+
 喜欢动手实践，尝试上手新框架，并与其他框架对比学习；
+
 喜欢研究一些算法；
+
 喜欢造轮子，通过动手，解决一些常见而又刁钻的需求，并开源与大家共享；
+
 喜欢写一写文章，分享一些开发心得和学习教程；
+
 喜欢看看电影和运动，保持一颗积极向上的心。
 
