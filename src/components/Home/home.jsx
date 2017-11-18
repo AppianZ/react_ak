@@ -1,5 +1,6 @@
 import React, { Component }  from 'react';
 import { Link } from 'react-router-dom'
+import * as http from '../libs/axios';
 
 class Home extends Component {
   constructor(props) {
@@ -8,12 +9,10 @@ class Home extends Component {
 
   componentDidMount() {
     this.generateCanvas();
+    this.applyForArticle('20160501');
   }
 
   generateCanvas() {
-    /*document.addEventListener('touchmove', function (e) {
-      e.preventDefault()
-    })*/
     var c = document.getElementsByTagName('canvas')[0],
       x = c.getContext('2d'),
       pr = window.devicePixelRatio || 1,
@@ -57,6 +56,16 @@ class Home extends Component {
     document.ontouchstart = i
     window.onresize = i
     i()
+  }
+
+  applyForArticle(id) {
+    http.get({
+      url: '/api/getarticle',
+      data: {id,},
+    }).then(res => {
+      console.log('~~~~===~~~~');
+      console.log(res);
+    })
   }
 
   render() {
