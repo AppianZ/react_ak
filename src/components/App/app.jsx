@@ -3,6 +3,8 @@ import { Route } from 'react-router-dom'
 import Home from './../Home';
 import About from  './../About';
 import List from  './../List';
+import Article from  './../../containers/Article';
+import NotFound from  './../NotFound';
 import PropTypes from 'prop-types';
 import createHistory from 'history/createHashHistory';
 const history = createHistory();
@@ -40,6 +42,8 @@ class App extends React.Component {
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/articles" component={List}/>
+        <Route path="/article" component={Article}/>
+        <Route path="*" component={NotFound}/>
       </div>
     )
   }

@@ -1,0 +1,89 @@
+$rem: 75;
+@function r($px) {
+  @return $px / $rem * 1 + rem;
+}
+
+@mixin f($font-size) {
+  font-size: $font-size + px;
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 2 + px;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3 + px;
+  }
+}
+
+#About {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  background: url('https://ohovav7hg.qnssl.com/homepagebg.png') repeat;
+  background-size: contain;
+  background-position: top left;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 751px) {
+  #About {
+    height: 100%;
+    perspective: 1px;
+  }
+  .mobile-box, .mobile-container{
+    display: none!important;
+  }
+  .pc-box{
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+  .pc-container {
+    position: absolute;
+    left: 50%;
+    width: 750px;
+    min-height: 100%;
+    font-size: 20px;
+    line-height: 2;
+    color: #555;
+    background: rgba(255,255,255,.5);
+    transform: translate3d(-50%, 0, 0) scale(1);
+  }
+  .pc-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translate3d(0 , 0, -1px) scale(2.05);
+    .color-icon {
+      width: 4em;
+      height: 4em;
+    }
+  }
+  @for $i from 0 through 8 {
+    .pc-icon-#{$i} {
+      top: (random() * 3600) + 100px;
+      left: -(random() * .6) * 750px - 200px;
+    }
+  }
+  @for $i from 9 through 17 {
+    .pc-icon-#{$i} {
+      top: (random()  * 3600) + 100px;
+      right: -(random() * .6) * 750px - 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .menu-box, .pc-icon, .pc-box {
+    display: none!important;
+  }
+  .mobile-box {
+    display: block!important;
+    min-width: r(350);
+    padding-top: r(110);
+    padding-left: r(55);
+    padding-right: r(55);
+    background: rgba(255,255,255,.6);
+  }
+}
+
