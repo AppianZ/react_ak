@@ -135,7 +135,6 @@ body, html {
     overflow:hidden;
     margin: 1.5em 0;
   }
-
   li p{
     line-height: 1.885;
     margin: 0;
@@ -224,6 +223,8 @@ body, html {
   ul li, li{
     padding: 0;
     margin: 0;
+    list-style-type: disc;
+    line-height: 1.5;
   }
 
   ul p, ol p{
@@ -322,6 +323,7 @@ body, html {
   pre p{
     margin: 0;
     padding: 0;
+    line-height: 1.5;
   }
 
   .codehilite th, .codehilite td{
