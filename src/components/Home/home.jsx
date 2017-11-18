@@ -9,7 +9,7 @@ class Home extends Component {
 
   componentDidMount() {
     this.generateCanvas();
-    this.applyForArticle('20160501');
+    // this.applyForArticle('20160501');
   }
 
   generateCanvas() {
