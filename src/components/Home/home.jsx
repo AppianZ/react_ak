@@ -9,7 +9,7 @@ class Home extends Component {
 
   componentDidMount() {
     this.generateCanvas();
-    // this.applyForArticle('20160501');
+    this.applyForArticle('20160501');
   }
 
   generateCanvas() {
@@ -59,9 +59,8 @@ class Home extends Component {
   }
 
   applyForArticle(id) {
-    http.get({
-      url: '/api/getarticle',
-      data: {id,},
+    http.get('/api/getarticle', {
+      data: {id},
     }).then(res => {
       console.log('~~~~===~~~~');
       console.log(res);
