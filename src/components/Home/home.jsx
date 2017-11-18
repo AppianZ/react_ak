@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 import { Link } from 'react-router-dom'
-import * as http from '../libs/axios';
+import * as http from '../../assets/js/axios';
 
 class Home extends Component {
   constructor(props) {
