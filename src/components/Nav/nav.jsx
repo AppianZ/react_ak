@@ -53,10 +53,10 @@ class Nav extends Component {
         <div className="nav-pc">
           <div className="menu-links-wrap" id="menu">
             <ul className="menu-links middle">
-              <li><Link className="menu-link" to={this.props.url === '0' ? '' : '/'}>Home</Link></li>
-              <li><Link className="menu-link" to={this.props.url === '1' ? '' : '/articles'}>Articles</Link></li>
+              <li><Link className="menu-link" to={this.props.url === '0' ? '#' : '/'}>Home</Link></li>
+              <li><Link className="menu-link" to={this.props.url === '1' ? '#' : '/articles'}>Articles</Link></li>
               <li><a className="menu-link" href="https://github.com/AppianZ" target="_blank">GitHub</a></li>
-              <li><Link className="menu-link" to={this.props.url === '2' ? '' : '/about'}>About</Link></li>
+              <li><Link className="menu-link" to={this.props.url === '2' ? '#' : '/about'}>About</Link></li>
             </ul>
           </div>
           <div className="copyright">Knowledge is weightless, a treasure you can always carry easily.<br/>

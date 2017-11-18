@@ -15,7 +15,7 @@ class Articles extends Component {
         url: 'https://ohovav7hg.qnssl.com/articlecover6.png'
       }, {
         title: '一段人人都应该知道的从vue到react的过渡史',
-        desc: 'From Zero to React <br/>【从Zero开始系列】【手写类教程】【React】',
+        desc: 'From Zero to React <br/>【From Zero系列】【手写类教程】【React】',
         id:'20161222',
         url: 'https://ohovav7hg.qnssl.com/articlecover5.png'
       }, {
@@ -35,7 +35,7 @@ class Articles extends Component {
         url: 'https://ohovav7hg.qnssl.com/articlecover2.png'
       }, {
         title: '从零开始学Vue',
-        desc: 'From Zero to Vue <br/>【从Zero开始系列】【手写类教程】【Vue】',
+        desc: 'From Zero to Vue <br/>【From Zero系列】【手写类教程】【Vue】',
         id:'20160427',
         url: 'https://ohovav7hg.qnssl.com/articlecover1.png'
       }],
@@ -54,7 +54,7 @@ class Articles extends Component {
             <p dangerouslySetInnerHTML={{__html:obj.desc}}></p>
           </span>
         </div>
-        <div className="article-img" style={{backgroundImage: 'url(' + obj.url + ')',
+        <div className="article-img" style={{backgroundImage: 'url(' + obj.url + '?imageView2/2/w/700/q/60/format/JPG/interlace/1)',
           backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
         }}></div>
       </div>
@@ -64,7 +64,7 @@ class Articles extends Component {
   generateMobileTitle(obj, index) {
     return (
       <div className="title-box" key={index}
-           style={{backgroundImage: 'url(' + obj.url + ')',
+           style={{backgroundImage: 'url(' + obj.url + '?imageView2/2/w/700/q/60/format/JPG/interlace/1)',
              backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
            }}>
         <div className="article-title">
@@ -88,8 +88,8 @@ class Articles extends Component {
         <Loading></Loading>
         <div className="articles-header">
           <div>
-            <h5>ARTICLES</h5>
-            <p>ArticlesArticlesArticlesArticlesArticles<br/>ArticlesArticlesArticlesArticlesArticles</p>
+            <h5>Articles</h5>
+            <p>越悲怆的时候, 我越嬉皮<br/>【From Zero系列】【手写类教程】【翻译计划】【焦虑小课堂】</p>
           </div>
         </div>
         <div className="pc-articles">

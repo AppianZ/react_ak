@@ -22,10 +22,10 @@ class Header extends Component {
         </div>
         <div id="popList" onClick={onMenuBtnClick}>
           <ul>
-            <li className={this.props.url === '0' ? 'on' : ''}><Link to={this.props.url === '0' ? '' : '/'}>Home</Link></li>
-            <li className={this.props.url === '1' ? 'on' : ''}><Link to={this.props.url === '1' ? '' : '/articles'}>Articles</Link></li>
+            <li className={this.props.url === '0' ? 'on' : ''}><Link to={this.props.url === '0' ? '#' : '/'}>Home</Link></li>
+            <li className={this.props.url === '1' ? 'on' : ''}><Link to={this.props.url === '1' ? '#' : '/articles'}>Articles</Link></li>
             <li><a href="https://github.com/AppianZ" target="_blank">GitHub</a></li>
-            <li className={this.props.url === '2' ? 'on' : ''}><Link to={this.props.url === '2' ? '' : '/about'}>About</Link></li>
+            <li className={this.props.url === '2' ? 'on' : ''}><Link to={this.props.url === '2' ? '#' : '/about'}>About</Link></li>
           </ul>
         </div>
       </div>
