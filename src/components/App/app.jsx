@@ -4,7 +4,7 @@ import Home from './../Home';
 import About from  './../About';
 import List from  './../List';
 import Article from  './../../containers/Article';
-import NotFound from  './../NotFound';
+// import NotFound from  './../NotFound';
 import PropTypes from 'prop-types';
 import createHistory from 'history/createHashHistory';
 const history = createHistory();
