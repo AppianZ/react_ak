@@ -6,7 +6,7 @@ const showMenu = (state = false, action) => {
     // 根据不用的type来修改state
     case common_type.TOGGLE_MENU:
       if(state && $('#popul')) {
-        $('#popul').removeClass('ul-end')
+        $('#popul').addClass("ul-start")
           .on('webkitTransitionEnd',function () {
           $('#popul')
             .removeClass('ul-position')
