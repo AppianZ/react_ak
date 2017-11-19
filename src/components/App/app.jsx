@@ -43,7 +43,6 @@ class App extends React.Component {
         <Route path="/about" component={About}/>
         <Route path="/articles" component={List}/>
         <Route path="/article" component={Article}/>
-        <Route path="*" component={NotFound}/>
       </div>
     )
   }
