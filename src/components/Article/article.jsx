@@ -39,7 +39,7 @@ class About extends Component {
         })
       } else  {
         console.log(res);
-        // this.props.history.push('/none')
+        this.props.history.push('/none')
       }
     })
   }
