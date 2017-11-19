@@ -108,6 +108,7 @@ $rem: 75;
       left: 0;
       background: rgba(0, 0, 0, 0);
       z-index: -1;
+      -webkit-backface-visibility: hidden;
       transition: z-index 0s ease .7s, background .5s ease;
       > ul {
         position: absolute;
@@ -117,7 +118,7 @@ $rem: 75;
         z-index: 950;
         -webkit-backface-visibility: hidden;
         transform: translate3d(0, -100%, 0);
-        transition: transform .5s ease;
+        transition: transform .5s ease 0s;
         &:after {
           content: '';
           position: relative;
@@ -142,6 +143,7 @@ $rem: 75;
           r(1300) 0 #ffa3b5;
         }
         li {
+          -webkit-backface-visibility: hidden;
           display: block;
           height: r(100);
           line-height: r(100);
