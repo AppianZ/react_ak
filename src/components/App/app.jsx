@@ -3,7 +3,7 @@ import { Route , Switch } from 'react-router-dom'
 import Home from './../Home';
 import About from  './../About';
 import List from  './../List';
-// import Article from  './../../containers/Article';
+import Article from  './../../components/Article';
 import NotFound from  './../NotFound';
 import PropTypes from 'prop-types';
 import createHistory from 'history/createHashHistory';
@@ -39,7 +39,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
-          <Route path="/articles" component={List}/>
+          <Route exact path="/articles" component={List}/>
+          <Route exact path="/article" component={Article}/>
           <Route component={NotFound}/>
         </Switch>
       </div>

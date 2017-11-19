@@ -17,7 +17,6 @@ $rem: 75;
 
 #Box404 {
   position: absolute;
-  height: 100vh;
   width: 100%;
   background: #222;
   overflow: hidden;
@@ -25,13 +24,16 @@ $rem: 75;
 }
 
 @media screen and (min-width: 751px) {
+  #Box404 {
+    height: 100vh;
+  }
   .mobile-404 {
     display: none;
   }
   .pc-404 {
     position: absolute;
     width: 100%;
-    top: 50%;
+    top: 48%;
     left: 50%;
     transform: translate3d(-50%,-50%, 0);
     text-align: center;
@@ -81,6 +83,9 @@ $rem: 75;
 }
 
 @media screen and (max-width: 750px) {
+  #Box404 {
+    height: 100%;
+  }
   .pc-404 {
     display: none;
   }

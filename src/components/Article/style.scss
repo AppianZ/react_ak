@@ -1,0 +1,135 @@
+$rem: 75;
+@function r($px) {
+  @return $px / $rem * 1 + rem;
+}
+
+@mixin f($font-size) {
+  font-size: $font-size + px;
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 2 + px;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3 + px;
+  }
+}
+
+#Article {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  background: url('https://ohovav7hg.qnssl.com/homepagebg.png') repeat;
+  background-size: contain;
+  background-position: top left;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 751px) {
+  #Article {
+  }
+  .mobile-article {
+    display: none!important;
+  }
+  .article-header {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 35%;
+    &:after {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-bottom: 35%;
+      background: rgba(0, 0, 0, .6);
+    }
+    .article-title {
+      position: absolute;
+      width: 750px;
+      left: 50%;
+      bottom: 50px;
+      transform: translate3d(-50%, 0, 0);
+      z-index: 10;
+      h5 {
+        padding: 0 0 20px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 36px;
+      }
+      p {
+        color: rgba(255,255,255, .8);
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
+  }
+  .pc-article {
+    position: relative;
+  }
+  .pc-container {
+    position: relative;
+    display: inline-block;
+    width: 750px;
+    min-height: 100vh;
+    left: 50%;
+    font-size: 20px;
+    line-height: 2;
+    color: #555;
+    background: rgba(255,255,255,.5);
+    transform: translate3d(-50%, 0, 0) scale(1);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .menu-box, .pc-article{
+    display: none!important;
+  }
+  .article-header {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    &:after {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-bottom: 100%;
+      background: rgba(0, 0, 0, .6);
+    }
+    .article-title {
+      position: absolute;
+      width: r(640);
+      left: 50%;
+      bottom: r(50);
+      transform: translate3d(-50%, 0, 0);
+      z-index: 10;
+      h5 {
+        padding: 0 0 r(20);
+        color: #fff;
+        font-weight: 600;
+        @include f(24);
+      }
+      p {
+        color: rgba(255,255,255, .8);
+        font-weight: 300;
+        @include f(14);
+        line-height: 1.5;
+      }
+    }
+  }
+  .mobile-article {
+    display: block!important;
+    min-width: r(350);
+    padding-left: r(55);
+    padding-right: r(55);
+    background: rgba(255,255,255,.6);
+  }
+}
+
