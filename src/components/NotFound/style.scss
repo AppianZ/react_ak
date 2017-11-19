@@ -81,5 +81,49 @@ $rem: 75;
 }
 
 @media screen and (max-width: 750px) {
+  .pc-404 {
+    display: none;
+  }
+  .mobile-404 {
+    position: absolute;
+    width: 100%;
+    min-width: r(400);
+    top: 48%;
+    left: 50%;
+    transform: translate3d(-50%,-50%, 0);
+    text-align: center;
+    p {
+      margin: r(30) auto;
+      color: #888;
+      @include f(14);
+      text-align: center;
+      line-height: 1.3;
+      letter-spacing: r(1);
+      font-weight: 300;
+      a {
+        color: #fff;
+        &:hover, &:active {
+          color: red;
+        }
+      }
+    }
+    h1 {
+      display: inline-block;
+      color: #fff;
+      @include f(120);
+      vertical-align: middle;
+      font-weight: 700;
+    }
+    .stone {
+      display: inline-block;
+      width: r(277);
+      height: r(325);
+      margin: 0 r(-20) 0 r(-15);
+      background: url('https://ohovav7hg.qnssl.com/article404.png?imageView2/2/q/40') no-repeat;
+      background-size: 100%;
+      background-position: center 73%;
+      vertical-align: bottom;
+    }
+  }
 }
 

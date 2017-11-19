@@ -17,7 +17,11 @@ const NotFound = () => (
       <p>Go <Link to="/">HOME</Link> and tell everyone all about it.</p>
     </div>
     <div className="mobile-404">
-
+      <p>Congrats,<br/> you discovered a new part of the internet! <br/> BOOM!!!</p>
+      <h1>4</h1>
+      <span className="stone"></span>
+      <h1>4</h1>
+      <p>Go <Link to="/">HOME</Link> and tell everyone all about it.</p>
     </div>
   </div>
 )
