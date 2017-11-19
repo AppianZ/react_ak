@@ -4,6 +4,8 @@ import Loading from './../../components/Loading';
 import Head from './../../containers/Head';
 import * as http from '../../assets/js/axios';
 import article from './../../components/About/resume.md';
+import createHistory from 'history/createHashHistory';
+const history = createHistory();
 
 class About extends Component {
   constructor(props) {
@@ -16,17 +18,12 @@ class About extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    const queryId = nextProps.location.search.replace('?id=', '').toString();
-    console.log(queryId);
-    /*this.setState({
-      content: article.toString(),
-      title: '一段人人都应该知道的从Vue到React的dasdsadasdas过渡史',
-      desc: 'From Zero to React <br/>【From Zero系列】【手写类教程】【React】',
-      id:'20161022',
-      url: 'https://ohovav7hg.qnssl.com/articlecover5.png'
-    })*/
-    this.applyForArticle(queryId);
+  componentDidMount() {
+    history.listen((location) => {
+      const queryId = location.search.replace('?id=', '').toString();
+      console.log(queryId)
+      this.applyForArticle(queryId);
+    })
   }
 
   applyForArticle(id) {
