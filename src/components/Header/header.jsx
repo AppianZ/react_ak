@@ -21,7 +21,7 @@ class Header extends Component {
           <div id="headerLineWrap" onClick={onMenuBtnClick}><div><span></span><span></span><span></span></div></div>
         </div>
         <div id="popList" onClick={onMenuBtnClick}>
-          <ul>
+          <ul id="popul" className="ul-start">
             <li className={this.props.url === '0' ? 'on' : ''}><Link to={this.props.url === '0' ? '#' : '/'}>Home</Link></li>
             <li className={this.props.url === '1' ? 'on' : ''}><Link to={this.props.url === '1' ? '#' : '/articles'}>Articles</Link></li>
             <li><a href="https://github.com/AppianZ" target="_blank">GitHub</a></li>
