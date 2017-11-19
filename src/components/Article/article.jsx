@@ -17,7 +17,7 @@ class About extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const queryId = nextProps.location.search.replace('?id=', '');
+    const queryId = nextProps.location.search.replace('?id=', '').toString();
     console.log(queryId);
     /*this.setState({
       content: article.toString(),
@@ -35,17 +35,16 @@ class About extends Component {
     }).then(res => {
       console.log('~~~~===~~~~');
       console.log(res);
-      this.setState({
-        content: article.toString(),
-        title: '一段人人都应该知道的从Vue到React的dasdsadasdas过渡史',
-        desc: 'From Zero to React <br/>【From Zero系列】【手写类教程】【React】',
-        id:'20161022',
-        url: 'https://ohovav7hg.qnssl.com/articlecover5.png'
-      })
+      if(res.code === 200) {
+        this.setState({
+          content: res.content,
+          ...res.obj
+        })
+      } else  {
+        console.log(res);
+        // this.props.history.push('/none')
+      }
     })
-  }
-
-  componentDidMount() {
   }
 
   render() {

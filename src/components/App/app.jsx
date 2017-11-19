@@ -38,9 +38,10 @@ class App extends React.Component {
       + (loading ? 'load' : 'loaded')}>
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About}/>
+          <Route exact path="/about" component={About}/>
           <Route exact path="/articles" component={List}/>
           <Route exact path="/article" component={Article}/>
+          <Route exact path="/none" component={NotFound}/>
           <Route component={NotFound}/>
         </Switch>
       </div>
