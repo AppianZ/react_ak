@@ -7,7 +7,7 @@ import article from './../../components/About/resume.md';
 import createHistory from 'history/createHashHistory';
 const history = createHistory();
 
-class About extends Component {
+class Article extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,11 +19,15 @@ class About extends Component {
   }
 
   componentDidMount() {
-    history.listen((location) => {
-      const queryId = location.search.replace('?id=', '').toString();
-      console.log(queryId)
-      this.applyForArticle(queryId);
-    })
+    console.log(this.query('id'));
+    this.applyForArticle(this.query('id'));
+  }
+
+  query(name) {
+    const reg = new RegExp(`(#|^|&)${name}=([^&]*)(&|$)`, 'i');
+    const r = window.location.hash.split('?')[1].match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
   }
 
   applyForArticle(id) {
@@ -39,7 +43,7 @@ class About extends Component {
         })
       } else  {
         console.log(res);
-        this.props.history.push('/none')
+        // this.props.history.push('/none')
       }
     })
   }
@@ -72,4 +76,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Article;
