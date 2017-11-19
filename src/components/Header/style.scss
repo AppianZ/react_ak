@@ -115,7 +115,7 @@ $rem: 75;
         width: 100%;
         background: #111;
         z-index: 950;
-        webkit-backface-visibility:hidden;
+        -webkit-backface-visibility: hidden;
         transform: translate3d(0, -100%, 0);
         transition: transform .5s ease;
         &:after {
