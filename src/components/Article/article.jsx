@@ -19,8 +19,8 @@ class Article extends Component {
   }
 
   componentDidMount() {
-    console.log(this.query('id'));
-    this.applyForArticle(this.query('id'));
+    const res = this.applyForArticle(this.query('id'));
+    console.log(res);
   }
 
   query(name) {
@@ -30,21 +30,9 @@ class Article extends Component {
     return null;
   }
 
-  applyForArticle(id) {
-    http.get('/api/getarticle', {
+  async applyForArticle(id) {
+    return await http.get('/api/getarticle', {
       data: {id},
-    }).then(res => {
-      console.log('~~~~===~~~~');
-      console.log(res);
-      if(res.code === 200) {
-        this.setState({
-          content: res.content,
-          ...res.obj
-        })
-      } else  {
-        console.log(res);
-        // this.props.history.push('/none')
-      }
     })
   }
 
