@@ -108,7 +108,6 @@ $rem: 75;
       left: 0;
       background: rgba(0, 0, 0, 0);
       z-index: -1;
-      -webkit-backface-visibility: hidden;
       transition: z-index 0s ease .7s, background .5s ease;
       > ul {
         position: absolute;
@@ -116,10 +115,8 @@ $rem: 75;
         width: 100%;
         background: #111;
         z-index: 950;
-        -webkit-backface-visibility:hidden;
-        -webkit-transform-style: preserve-3d;
-        transform: translate3d(0, 0, 0);
-        transition: transform .5s ease 0s;
+        transform: translate3d(0, -100%, 0);
+        transition: transform .5s ease;
         &:after {
           content: '';
           position: relative;
@@ -176,9 +173,7 @@ $rem: 75;
         z-index: 900;
         transition: z-index 0s ease, background .5s ease;
         > ul {
-          -webkit-backface-visibility:hidden;
-          -webkit-transform-style: preserve-3d;
-          transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 0, 0);
         }
       }
       #headerLineWrap > div {
