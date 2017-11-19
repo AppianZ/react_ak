@@ -2,10 +2,7 @@ import React, {Component} from 'react'
 import Menu from './../../containers/Menu';
 import Loading from './../../components/Loading';
 import Head from './../../containers/Head';
-import * as http from '../../assets/js/axios';
-import article from './../../components/About/resume.md';
-import createHistory from 'history/createHashHistory';
-const history = createHistory();
+// import * as http from '../../assets/js/axios';
 
 class Article extends Component {
   constructor(props) {
@@ -30,9 +27,14 @@ class Article extends Component {
     return null;
   }
 
-  async applyForArticle(id) {
-    return await http.get('/api/getarticle', {
+   applyForArticle(id) {
+    $.ajax({
+      url: '/api/getarticle',
       data: {id},
+      methods: 'get',
+      success(data) {
+        console.log(data);
+      }
     })
   }
 
