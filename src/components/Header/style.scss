@@ -118,7 +118,7 @@ $rem: 75;
         transition: transform .5s ease 0s;
         -webkit-backface-visibility: hidden;
         -webkit-transform-style: preserve-3d;
-        -webkit-transform:translate3d(0,100%,0);
+        -webkit-transform:translate3d(0, -100%,0);
         transform: translate3d(0, -100%, 0);
         &:after {
           content: '';
