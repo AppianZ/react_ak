@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 import { Link } from 'react-router-dom'
-import * as http from '../../assets/js/axios';
+// import * as http from '../../assets/js/axios';
 
 class Home extends Component {
   constructor(props) {
@@ -58,14 +58,14 @@ class Home extends Component {
     i()
   }
 
-  applyForArticle(id) {
+ /* applyForArticle(id) {
     http.get('/api/getarticle', {
       data: {id},
     }).then(res => {
       console.log('~~~~===~~~~');
       console.log(res);
     })
-  }
+  }*/
 
   render() {
     return (

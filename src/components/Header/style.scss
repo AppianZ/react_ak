@@ -146,6 +146,7 @@ $rem: 75;
           height: r(100);
           line-height: r(100);
           color: #fff;
+          -webkit-transform: translate3d(0,0,0);
           a {
             display: block;
             text-indent: r(60);
