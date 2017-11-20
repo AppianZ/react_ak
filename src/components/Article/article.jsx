@@ -31,7 +31,7 @@ class Article extends Component {
     http.get('/api/getarticle', {
       data: {id}
     }).then(result => {
-      if (result.code === 200) {
+      if (result.code == 200) {
         this.setState({
           content: result.content,
           title: 'success',
