@@ -30,20 +30,19 @@ class Article extends Component {
   applyForArticle(id) {
     http.get('/api/getarticle', {
       data: {id}
-    }).then(result => {
+    }).then(res => {
+      const result = res.data;
       console.log(result);
       if (result.code == 200) {
         this.setState({
           content: result.content,
-          title: 'success',
+          title: result.obj.title,
           desc: result.obj.desc,
           url: result.obj.url,
           id: result.obj.id,
         })
       } else {
-        this.setState({
-          title: 'falsi',
-        })
+        this.props.history.push('/none');
       }
     });
   }
