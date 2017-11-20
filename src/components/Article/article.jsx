@@ -17,8 +17,7 @@ class Article extends Component {
   }
 
   componentDidMount() {
-    // this.applyForArticle(this.query('id'));
-    console.log('this is in componentDidMount');
+    this.applyForArticle(this.query('id'));
   }
 
   query(name) {
@@ -29,11 +28,9 @@ class Article extends Component {
   }
 
   applyForArticle(id) {
-    console.log('this is in applyForArticle');
     http.get('/api/getarticle', {
       data: {id}
     }).then(result => {
-      console.log(result);
       if (result.code === 200) {
         this.setState({
           content: result.content,
