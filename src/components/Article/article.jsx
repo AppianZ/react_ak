@@ -17,7 +17,7 @@ class Article extends Component {
   }
 
   componentDidMount() {
-    this.applyForArticle(this.query('id'));
+    // this.applyForArticle(this.query('id'));
     console.log('this is in componentDidMount');
   }
 
@@ -28,24 +28,26 @@ class Article extends Component {
     return null;
   }
 
-  async applyForArticle(id) {
+  applyForArticle(id) {
     console.log('this is in applyForArticle');
-    const result = await http.get('/api/getarticle', {
+    http.get('/api/getarticle', {
       data: {id}
+    }).then(result => {
+      console.log(result);
+      if (result.code === 200) {
+        this.setState({
+          content: result.content,
+          title: 'success',
+          desc: result.obj.desc,
+          url: result.obj.url,
+          id: result.obj.id,
+        })
+      } else {
+        this.setState({
+          title: 'falsi',
+        })
+      }
     });
-    if (result.code === 200) {
-      this.setState({
-        content: result.content,
-        title: 'success',
-        desc: result.obj.desc,
-        url: result.obj.url,
-        id: result.obj.id,
-      })
-    } else {
-      this.setState({
-        title: 'falsi',
-      })
-    }
   }
 
   render() {

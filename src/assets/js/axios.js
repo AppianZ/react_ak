@@ -32,13 +32,7 @@ function ajax(options) {
     console.log('------ httpObj ----');
     console.log(httpObj);
 
-    return axios(httpObj).then(function(resData) {
-        console.log('------ axioscb ---- response ----');
-        return resData;
-    }, function (resErr) {
-        console.log('------ axioscb ---- resErr ----');
-        return resErr;
-    });
+    return axios(httpObj);
 }
 
 export function get(url, options) {
