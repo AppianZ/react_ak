@@ -8,6 +8,7 @@ class Article extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      content: '',
       title: '',
       desc: '',
       url: '',
@@ -16,7 +17,8 @@ class Article extends Component {
   }
 
   componentDidMount() {
-    console.log(this.applyForArticle(this.query('id')));
+    this.applyForArticle(this.query('id'));
+    console.log('this is in componentDidMount');
   }
 
   query(name) {
@@ -31,7 +33,19 @@ class Article extends Component {
     const result = await http.get('/api/getarticle', {
       data: {id}
     });
-    return result;
+    if (result.code === 200) {
+      this.setState({
+        content: result.content,
+        title: 'success',
+        desc: result.obj.desc,
+        url: result.obj.url,
+        id: result.obj.id,
+      })
+    } else {
+      this.setState({
+        title: 'falsi',
+      })
+    }
   }
 
   render() {
