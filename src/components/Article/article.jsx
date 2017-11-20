@@ -56,8 +56,8 @@ class Article extends Component {
   render() {
     return (
       <div id="Article">
-        <Menu url={'2'}></Menu>
-        <Head url={'2'}></Head>
+        <Menu url={'4'}></Menu>
+        <Head url={'4'}></Head>
         <Loading></Loading>
         <div className="article-header"
              style={{

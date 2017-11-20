@@ -23,6 +23,7 @@ class App extends React.Component {
     history.listen((location) => {
       setShowMenuFalse();
       toggleLoading(true);
+      document.getElementById('App').scrollTop = 0;
       setTimeout(() => {
         toggleLoading(false);
       }, 1250);
