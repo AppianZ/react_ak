@@ -32,7 +32,6 @@ class Article extends Component {
       data: {id}
     }).then(res => {
       const result = res.data;
-      console.log(result);
       if (result.code == 200) {
         this.setState({
           content: result.content,
