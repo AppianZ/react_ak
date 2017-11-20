@@ -31,6 +31,7 @@ class Article extends Component {
     http.get('/api/getarticle', {
       data: {id}
     }).then(result => {
+      console.log(result);
       if (result.code == 200) {
         this.setState({
           content: result.content,
