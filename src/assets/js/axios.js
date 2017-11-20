@@ -6,6 +6,8 @@ function generatorUrl(url, data) {
     for(let i in data) {
         queryArr.push(`${i}=${data[i]}`)
     }
+  console.log('------ generatorUrl -----');
+  console.log(`${url}?${queryArr.join('&')}`);
     return `${url}?${queryArr.join('&')}`
 }
 
@@ -26,6 +28,9 @@ function ajax(options) {
         }],
         data,
     }
+
+    console.log('------ httpObj ----');
+    console.log(httpObj);
 
     return axios(httpObj).then(function(resData) {
         console.log('------ axioscb ---- response ----');
