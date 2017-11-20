@@ -17,7 +17,14 @@ class Article extends Component {
   }
 
   componentDidMount() {
+    $('body').addClass('over-md');
+    $('html').addClass('over-md');
     this.applyForArticle(this.query('id'));
+  }
+
+  componentWillUnmount() {
+    $('body').removeClass('over-md');
+    $('html').removeClass('over-md');
   }
 
   query(name) {
