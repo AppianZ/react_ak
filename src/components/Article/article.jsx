@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Menu from './../../containers/Menu';
 import Loading from './../../components/Loading';
 import Head from './../../containers/Head';
-// import * as http from '../../assets/js/axios';
+import * as http from '../../assets/js/axios';
 
 class Article extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class Article extends Component {
   }
 
   componentDidMount() {
-    this.applyForArticle(this.query('id'));
+    console.log(this.applyForArticle(this.query('id')));
   }
 
   query(name) {
@@ -26,16 +26,12 @@ class Article extends Component {
     return null;
   }
 
-  applyForArticle(id) {
-    const that = this;
-    $.ajax({
-      url: '/api/getarticle',
-      data: {id},
-      methods: 'get',
-      success(data) {
-        console.log(data);
-      }
-    })
+  async applyForArticle(id) {
+    console.log('this is in applyForArticle');
+    const result = await http.get('/api/getarticle', {
+      data: {id}
+    });
+    return result;
   }
 
   render() {
