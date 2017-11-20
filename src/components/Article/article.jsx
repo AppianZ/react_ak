@@ -16,8 +16,7 @@ class Article extends Component {
   }
 
   componentDidMount() {
-    const res = this.applyForArticle(this.query('id'));
-    console.log(res);
+    this.applyForArticle(this.query('id'));
   }
 
   query(name) {
@@ -27,7 +26,8 @@ class Article extends Component {
     return null;
   }
 
-   applyForArticle(id) {
+  applyForArticle(id) {
+    const that = this;
     $.ajax({
       url: '/api/getarticle',
       data: {id},
@@ -45,12 +45,13 @@ class Article extends Component {
         <Head url={'2'}></Head>
         <Loading></Loading>
         <div className="article-header"
-             style={{backgroundImage: 'url(' + this.state.url + '?imageView2/2/w/1000/q/160/format/JPG/interlace/1)',
+             style={{
+               backgroundImage: 'url(' + this.state.url + '?imageView2/2/w/1000/q/160/format/JPG/interlace/1)',
                backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
              }}>
           <div className="article-title">
             <h5>{this.state.title}</h5>
-            <p dangerouslySetInnerHTML={{__html:this.state.desc}}></p>
+            <p dangerouslySetInnerHTML={{__html: this.state.desc}}></p>
           </div>
         </div>
         <div className="pc-article">
