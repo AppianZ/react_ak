@@ -60,7 +60,7 @@ class Articles extends Component {
         <div className="articles-header">
           <div>
             <h5>Articles</h5>
-            <p>越悲怆的时候, 我越嬉皮<br/>【From Zero系列】【算法轮子】【翻译计划】【手写类教程】【焦虑小课堂】</p>
+            <p>一个卖萌出家的算法妹纸的原创文集<br/>【From Zero系列】【算法轮子】【翻译计划】【手写类教程】【焦虑小课堂】</p>
           </div>
         </div>
         <div className="pc-articles">
