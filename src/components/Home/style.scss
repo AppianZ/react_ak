@@ -112,12 +112,12 @@ $rem: 75;
     width: 100%;
     h3 {
       letter-spacing: r(5);
-      @include f(24);
+      @include f(22);
     }
     p {
-      padding: r(2) 0 r(35);
+      padding: r(2) 0 r(45);
       color: rgba(102, 102, 102, 0.9);
-      @include f(20);
+      @include f(18);
     }
     .menu-link {
       display: inline-block;
