@@ -112,27 +112,28 @@ $rem: 75;
     width: 100%;
     h3 {
       letter-spacing: r(5);
-      @include f(18);
+      @include f(24);
     }
     p {
       padding: r(2) 0 r(35);
       color: rgba(102, 102, 102, 0.9);
-      @include f(14);
+      @include f(20);
     }
     .menu-link {
-      @include f(12);
-      color: #333;
-      font-weight: 700;
-      text-transform: uppercase;
       display: inline-block;
       position: relative;
-      z-index: 5000;
+      @include f(16);
+      color: #444;
+      letter-spacing: r(3);
+      font-weight: 400;
+      text-transform: uppercase;
       padding: r(15) 0;
       line-height: .7;
       transition: all .1s ease-in-out 0s;
       -webkit-transition: all .1s ease-in-out 0s;
       -moz-transition: .1s all 0s ease-in-out;
       -o-transition: .1s all 0s ease-in-out;
+      z-index: 5000;
       &:hover {
         color: #666;
       }
