@@ -20,6 +20,13 @@ class Article extends Component {
     $('body').addClass('over-md');
     $('html').addClass('over-md');
     this.applyForArticle(this.query('id'));
+    $('#App').scroll(function(event) {
+      if ($('#App').scrollTop() > 500) {
+        $('#backToTop').show();
+      } else {
+        $('#backToTop').hide();
+      };
+    });
   }
 
   componentWillUnmount() {
@@ -53,6 +60,10 @@ class Article extends Component {
     });
   }
 
+  backToTop() {
+    $('#App').animate({scrollTop: 0}, 500)
+  }
+
   render() {
     return (
       <div id="Article">
@@ -73,6 +84,7 @@ class Article extends Component {
           <div className="pc-container markdown"
                dangerouslySetInnerHTML={{__html: this.state.content}}>
           </div>
+          <div id="backToTop" className="backup" onClick={this.backToTop}></div>
         </div>
         <div className="mobile-article markdown"
              dangerouslySetInnerHTML={{__html: this.state.content}}>
