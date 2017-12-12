@@ -9,6 +9,11 @@ export default [{
   id:'20171015',
   url: 'https://ohovav7hg.qnssl.com/articlecover15.png'
 }, {
+  title: '从零开始学正则Reg',
+  desc: 'From Zero to Regular <br/>【From Zero系列】【手写类教程】',
+  id:'20170813',
+  url: 'https://ohovav7hg.qnssl.com/articlecover16.png'
+}, {
   title: '如何造一个『为移动端而生』的日历',
   desc: 'How to Build a Calendar <br/>【算法轮子】【手写类教程】【原生Js】',
   id:'20170601',
