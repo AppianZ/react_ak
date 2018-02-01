@@ -1,6 +1,6 @@
 export default [{
   title: '名侦探带你寻找 Vue 双向绑定的线索',
-  desc: 'How is defineProperty work? <br/>【手写类教程】【原生Js】【Vue】',
+  desc: 'How is defineProperty work?<br/>【手写类教程】【原生Js】【Vue】',
   id:'20180116',
   url: 'https://ohovav7hg.qnssl.com/articlecover34.jpeg'
 }, {
