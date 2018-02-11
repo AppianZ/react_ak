@@ -96,19 +96,6 @@
  
 
 
-## 技术文章
-
-- [名侦探带你寻找 Vue 双向绑定的线索](http://appian.me.meckodo.com/#/article?id=20180116)
-- [2段代码 + 3张图, 弄懂Event Loop](http://appian.me.meckodo.com/#/article?id=20171015)
-- [从零开始学正则Reg](http://appian.me.meckodo.com/#/article?id=20170813)
-- [如何造一个『为移动端而生』的日历](http://appian.me.meckodo.com/#/article?id=20170601)
-- [Vue动态组件之表单的CURD](http://www.jianshu.com/p/73dba151eb29)
-- [从零开始学Vue](https://segmentfault.com/a/1190000005041030)
-- [纪念即将逝去的Vue过滤器(翻译文章并补充)](https://segmentfault.com/a/1190000005027001) 
-- [组件改变生活_揭开Vue组件的神秘面纱](https://segmentfault.com/a/1190000005045219)
-- [『为移动端而生』的自定义多级联动选择器](https://segmentfault.com/a/1190000007480739)
-
-
 ## 技能关键字
 
 - 熟练使用 html5、css3、sass，有丰富的移动端开发经验，能够准确还原设计稿
