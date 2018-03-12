@@ -17,7 +17,6 @@
  - Github：[https://github.com/AppianZ](https://github.com/AppianZ) 
  - 技术社区：[segmentfault](https://segmentfault.com/u/appian)、[掘金](https://juejin.im/user/57c664355bbb5000635314b6/posts) 
  - 期望职位：前端开发工程师
- - 期望薪资：税前月薪 15 - 16k，年薪19 - 20w
 ---
 
 
